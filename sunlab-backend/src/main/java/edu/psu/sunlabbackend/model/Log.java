@@ -18,13 +18,14 @@ import java.sql.Timestamp;
 public class Log {
 
     @Id
-    @ManyToOne
-    private Users id;
-
     @Column(name="time")
     private Timestamp time;
 
-    @Column(name="location")
+    @ManyToOne
+    @JoinColumn(name="id")
+    private Users id;
+
+    @Column(name = "location")
     private Location location;
 
 }
