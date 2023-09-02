@@ -13,6 +13,6 @@ CREATE TABLE log (
     id      BIGINT,
     time    TIMESTAMP NOT NULL,
     location VARCHAR(5) CHECK (location IN ('IN', 'OUT')),
-    PRIMARY KEY (id, time),
+    PRIMARY KEY (time),
     FOREIGN KEY (id) REFERENCES users (id)
 );
