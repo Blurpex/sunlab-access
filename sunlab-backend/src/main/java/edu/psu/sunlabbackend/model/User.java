@@ -11,13 +11,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name="users")
-@Table(name="users")
+@Entity(name="user")
+@Table(name="user")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Users  {
+public class User  {
 
     @Id
     @Column(name="id", nullable=false)

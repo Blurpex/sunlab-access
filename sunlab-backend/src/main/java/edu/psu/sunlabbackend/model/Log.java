@@ -23,7 +23,7 @@ public class Log {
 
     @ManyToOne
     @JoinColumn(name="id")
-    private Users id;
+    private User id;
 
     @Column(name = "location")
     private Location location;
