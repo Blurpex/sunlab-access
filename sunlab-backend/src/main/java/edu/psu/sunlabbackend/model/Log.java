@@ -25,6 +25,7 @@ public class Log {
     @JoinColumn(name="id")
     private User id;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "location")
     private Location location;
 

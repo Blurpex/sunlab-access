@@ -2,10 +2,7 @@ package edu.psu.sunlabbackend.model;
 
 import edu.psu.sunlabbackend.model.enums.Role;
 import edu.psu.sunlabbackend.model.enums.Status;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,9 +23,11 @@ public class User  {
     @Column(name="name", nullable=false)
     private String name;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="role")
     private Role role;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="status")
     private Status status;
 
