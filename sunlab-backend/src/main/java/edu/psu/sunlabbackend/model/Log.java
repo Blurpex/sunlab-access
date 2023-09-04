@@ -23,7 +23,7 @@ public class Log {
 
     @ManyToOne
     @JoinColumn(name="id")
-    private User id;
+    private User Id;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "location")
