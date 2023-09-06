@@ -10,9 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- javascript -->
         <script src="../scripts/navbar.js"></script>
-        <script src="../scripts/fetch.js"></script>
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="../styles/users.css">
+        <script src="../scripts/users.js"></script>
 
         <title>SunLab Access System</title>
     </head>
@@ -35,25 +33,30 @@
                 </div>
             </div>
             <div class="row">
-                <label class="col s3 offset-s1">
-                    <input type="checkbox" />
-                    <span>Admin</span>
-                </label>
-                <label class="col s3">
-                    <input type="checkbox" />
-                    <span>Student</span>
-                </label>
-                <label class="col s3">
-                    <input type="checkbox" />
-                    <span>Faculty</span>
-                </label>
-                <label class="col s2">
-                    <input type="checkbox" />
-                    <span>Janitor</span>
-                </label>
+                <div class="col s6">
+                    <label>Role</label>
+                    <select id="role" class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="STUDENT">Student</option>
+                        <option value="FACULTY">Faculty</option>
+                        <option value="JANITOR">Janitor</option>
+                    </select>
+                </div>
+                <div class="col s6">
+                    <label>Status</label>
+                    <select id="status" class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="ACTIVE">Active</option>
+                        <option value="SUSPENDED">Suspended</option>
+                    </select>
+                </div>
             </div>
         </form>
-        <button class="btn waves-effect waves-light blue darken-4 center" onclick="getUsers()">Search</button>
+
+        <!-- buttons -->
+        <button class="btn waves-effect waves-light blue darken-4 center" onclick="getAllUsers()">Search</button>
+        <button class="btn waves-effect waves-light blue darken-4 center" onclick="addUser()">Add</button>
 
         <!-- table -->
         <div class="containers">
