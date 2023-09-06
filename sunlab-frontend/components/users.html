@@ -36,7 +36,7 @@
                 <div class="col s6">
                     <label>Role</label>
                     <select id="role" class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" selected>Choose your option</option>
                         <option value="ADMIN">Admin</option>
                         <option value="STUDENT">Student</option>
                         <option value="FACULTY">Faculty</option>
@@ -46,7 +46,7 @@
                 <div class="col s6">
                     <label>Status</label>
                     <select id="status" class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" selected>Choose your option</option>
                         <option value="ACTIVE">Active</option>
                         <option value="SUSPENDED">Suspended</option>
                     </select>
@@ -55,8 +55,10 @@
         </form>
 
         <!-- buttons -->
-        <button class="btn waves-effect waves-light blue darken-4 center" onclick="getAllUsers()">Search</button>
-        <button class="btn waves-effect waves-light blue darken-4 center" onclick="addUser()">Add</button>
+        <div class="center-align">
+            <button class="btn waves-effect waves-light blue darken-4 center " onclick="searchUser()">Search</button>
+            <button class="btn waves-effect waves-light blue darken-4 center " onclick="addUser()">Add</button>
+        </div>
 
         <!-- table -->
         <div class="containers">
