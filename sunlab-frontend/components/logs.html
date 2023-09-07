@@ -1,18 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
 
-    <!-- materialize css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- javascript -->
-    <script src="../scripts/navbar.js"></script>
+        <!-- materialize css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- javascript -->
+        <script src="../scripts/navbar.js"></script>
+        <script src="../scripts/logs.js"></script>
 
-    <title>SunLab Access System</title>
-</head>
-<body>
-    <!-- navigation bar -->
-    <div id="navbar"></div>
-</body>
+        <title>SunLab Access System</title>
+    </head>
+    <body>
+        <!-- navigation bar -->
+        <div id="navbar"></div>
+
+        <!-- filters -->
+        <div class="container">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="id" type="number" data-length="9">
+                    <label for="id">PSU ID</label>
+                </div>
+                <div class="col s6">
+                    <label>Location</label>
+                    <select id="location" class="browser-default">
+                        <option value="" selected>Choose your option</option>
+                        <option value="IN">In</option>
+                        <option value="OUT">Out</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                    <input id="start-date" type="date">
+                    <label for="start-date">Start Date</label>
+                </div>
+                <div class="col s3">
+                    <input id="end-date" type="date">
+                    <label for="end-date">End Date</label>
+                </div>
+                <div class="col s3">
+                    <input id="start-time" type="time">
+                    <label for="start-time">Start Time</label>
+                </div>
+                <div class="col s3">
+                    <input id="end-time" type="time">
+                    <label for="end-time">End Time</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="center-align">
+            <button class="btn waves-effect waves-light blue darken-4 center " onclick="searchLog()">Search</button>
+            <button class="btn waves-effect waves-light blue darken-4 center " onclick="clearInput()">Clear</button>
+        </div>
+
+        <!-- table -->
+        <div class="center-align">
+            <table class="striped highlight centered">
+                    <thead>
+                        <tr>
+                            <th>PSU ID</th>
+                            <th>Time</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                <tbody id="user-table"></tbody>
+            </table>
+        </div>
+
+    </body>
 </html>
