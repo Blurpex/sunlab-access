@@ -19,11 +19,11 @@ public class Log {
 
     @Id
     @Column(name="time")
-    private Timestamp time;
+    private Timestamp Time;
 
     @ManyToOne
     @JoinColumn(name="id")
-    private User Id;
+    private User ID;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "location")
