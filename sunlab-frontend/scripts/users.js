@@ -86,7 +86,6 @@ const clearInput = () => {
     getUserFormData();
     Object.keys(formInput).forEach(key => {
         formInput[key].value = ""
-        console.log(formInput[key])
     })
 
 }
