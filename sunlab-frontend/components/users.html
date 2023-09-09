@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- javascript -->
         <script src="../scripts/navbar.js"></script>
-        <script src="../scripts/users.js"></script>
+        <script src="../scripts/script.js"></script>
 
         <title>SunLab Access System</title>
     </head>
@@ -28,8 +28,8 @@
                 </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">tag</i>
-                    <input id="id" type="number" class="validate" data-length="9">
-                    <label for="id">PSU ID</label>
+                    <input id="userId" type="number" class="validate" data-length="9">
+                    <label for="userId">PSU ID</label>
                 </div>
             </div>
             <div class="row">
@@ -56,9 +56,9 @@
 
         <!-- buttons -->
         <div class="center-align">
-            <button class="btn waves-effect waves-light blue darken-4 center" onclick="searchUser()">Search</button>
+            <button class="btn waves-effect waves-light blue darken-4 center" onclick="search(userInputs, userUrl, 'userTable')">Search</button>
             <button class="btn waves-effect waves-light blue darken-4 center" onclick="addUser()">Add</button>
-            <button class="btn waves-effect waves-light blue darken-4 center" onclick="clearInput()">Clear</button>
+            <button class="btn waves-effect waves-light blue darken-4 center" onclick="clearInput(userInputs)">Clear</button>
         </div>
 
         <!-- table -->
@@ -72,7 +72,7 @@
                     <th>Status</th>
                 </tr>
                 </thead>
-                <tbody id="user-table"></tbody>
+                <tbody id="userTable"></tbody>
             </table>
         </div>
 
