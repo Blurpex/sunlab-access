@@ -1,5 +1,6 @@
 package edu.psu.sunlabbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import edu.psu.sunlabbackend.model.enums.Role;
 import edu.psu.sunlabbackend.model.enums.Status;
 import jakarta.persistence.*;
@@ -10,6 +11,7 @@ import lombok.Setter;
 
 @Entity(name="user")
 @Table(name="user")
+@JsonPropertyOrder({"id", "name", "role", "status"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

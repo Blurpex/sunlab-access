@@ -1,5 +1,6 @@
 package edu.psu.sunlabbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import edu.psu.sunlabbackend.model.enums.Location;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,7 @@ import java.sql.Timestamp;
 
 @Entity(name="log")
 @Table(name="log")
+@JsonPropertyOrder({"id", "time", "location"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
